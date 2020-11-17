@@ -27,7 +27,8 @@ class TaskController extends AdminController
     protected function grid()
     {
         return Grid::make(new Task(), function (Grid $grid) {
-            $grid->column('id')->sortable();
+
+            $grid->column('id');
             $grid->column('command', '命令');
             $grid->column('description', '描述');
             $grid->column('expression', '时间表达式');
@@ -71,7 +72,7 @@ class TaskController extends AdminController
                 return admin_url('taskLog/?task_id=' . $this->id);
             });
             $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('updated_at');
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->panel();

@@ -28,12 +28,14 @@ class TaskLogController extends AdminController
 
             $grid->disableCreateButton();
 
-            $grid->column('id')->sortable();
+            $grid->column('id');
             $grid->column('task_id', '任务ID');
             $grid->column('duration', '耗时')->append('ms');
             $grid->column('content', '内容');
             $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('updated_at');
+
+            $grid->model()->orderBy('created_at', 'desc');
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->panel();
