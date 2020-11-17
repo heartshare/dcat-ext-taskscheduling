@@ -3,6 +3,8 @@
 namespace Dcat\Admin\Extension\TaskScheduling;
 
 use Dcat\Admin\Extension\TaskScheduling\Console\Commands\ListSchedule;
+use Dcat\Admin\Extension\TaskScheduling\Models\Task;
+use Dcat\Admin\Extension\TaskScheduling\Observers\TaskObserver;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +33,8 @@ class TaskSchedulingServiceProvider extends ServiceProvider
         $this->app->booted(function () use ($extension) {
             $extension->routes(__DIR__ . '/../routes/web.php');
         });
+
+        Task::observe(TaskObserver::class);
     }
 
     /**
