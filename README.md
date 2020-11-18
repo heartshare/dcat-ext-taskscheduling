@@ -1,12 +1,13 @@
 ## 介绍
 一个Dcat Admin的定时任务可视化管理的插件
 
-## 环境要求
-- php >= 7.3.0
-- Dcat Admin 1.7.*
-- Laravel 5.5.*
+## 版本要求
+| <span align="left">Dcat Admin</span> | <span align="left">dcat-ext-taskscheduling</span> |
+| :-------------------------------- | ------------------------------: |
+| 2.x                               |                             2.x |
+| 1.x                               |                             1.x |
 
-## 安装使用
+## 1.x安装使用
 
 - 安装依赖
 
@@ -37,7 +38,19 @@
 - 至此菜单中会多出一个“定时任务”的菜单，进去就可以添加定时任务了。
 ![](docs/images/3.png)
 
+
+## 2.x安装使用
+
+- [参考Dcat Admin文档](http://www.dcatadmin.com/docs/2.x/extension-f.html)
+
+- 添加Laravel计划任务至Cron中(注：php和项目都需要绝对路径，可通过命令"which php"来查看的绝对路径)
+
+    ```bash
+    * * * * * /usr/.../.../bin/php /path-to-your-project/artisan schedule:run >> /dev/null 2>&1
+    ```
+
 ## 鸣谢
 + [Laravel](https://laravel.com/)
 + [Dact Admin](http://www.dcatadmin.com/)
 + [laravel-totem](https://github.com/codestudiohq/laravel-totem)
+
