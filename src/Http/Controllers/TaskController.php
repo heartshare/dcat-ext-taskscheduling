@@ -34,36 +34,9 @@ class TaskController extends AdminController
             $grid->column('expression', '时间表达式');
             $grid->column('parameters', '参数');
             $grid->column('notification_email_address', '通知邮件地址');
-            $grid->column('state', '状态')->using([
-                0 => '未开启',
-                1 => '已开启',
-            ])->dot(
-                [
-                    0 => 'gray',
-                    1 => 'success',
-                ],
-                'gray'
-            );
-            $grid->column('dont_overlap', '避免重复')->using([
-                0 => '未开启',
-                1 => '已开启',
-            ])->dot(
-                [
-                    0 => 'gray',
-                    1 => 'success',
-                ],
-                'gray'
-            );
-            $grid->column('run_in_maintenance', '维护模式')->using([
-                0 => '未开启',
-                1 => '已开启',
-            ])->dot(
-                [
-                    0 => 'gray',
-                    1 => 'success',
-                ],
-                'gray'
-            );
+            $grid->column('state', '状态')->switch();
+            $grid->column('dont_overlap', '避免重复')->switch();
+            $grid->column('run_in_maintenance', '维护模式')->switch();
             $grid->column('execute', '执行')->action(TaskExecute::class);
             $grid->column('logs', '日志')
                 ->prepend(function () {
