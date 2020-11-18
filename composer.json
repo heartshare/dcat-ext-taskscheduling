@@ -28,10 +28,10 @@
         }
     },
     "extra": {
-        "dcat-admin": "Dcat\\Admin\\Ext\\TaskScheduling\\DcatExtTaskschedulingServiceProvider",
+        "dcat-admin": "Dcat\\Admin\\Ext\\TaskScheduling\\TaskSchedulingServiceProvider",
         "laravel": {
             "providers": [
-                "Dcat\\Admin\\Ext\\TaskScheduling\\DcatExtTaskschedulingServiceProvider"
+                "Dcat\\Admin\\Ext\\TaskScheduling\\TaskSchedulingServiceProvider"
             ]
         }
     }
