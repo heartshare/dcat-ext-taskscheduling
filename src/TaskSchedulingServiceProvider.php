@@ -6,6 +6,7 @@ use Dcat\Admin\Admin;
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Ext\TaskScheduling\Console\Commands\ListSchedule;
 use Dcat\Admin\Ext\TaskScheduling\Models\Task;
+use Dcat\Admin\Ext\TaskScheduling\Observers\TaskObserver;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 use ReflectionException;
