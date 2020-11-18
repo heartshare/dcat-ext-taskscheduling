@@ -1,6 +1,6 @@
 {
     "name": "nivin-studio/dcat-ext-taskscheduling",
-    "description": "A Dcat-Admin package to manage your cron jobs through a beautiful dashboard",
+    "description": "Dcat Admin 定时任务可视化管理",
     "type": "library",
     "keywords": [
         "dcat-admin",
