@@ -29,15 +29,13 @@ HTML;
         }
     }
 
-    public function parameters()
+    public function getColumnName()
     {
-        return [
-            'class' => $this->modelClass(),
-        ];
+        return $this->column->getName();
     }
 
     public function modelClass()
     {
-        return get_class($this->parent->model()->eloquent()->repository()->eloquent());
+        return get_class($this->parent->model()->repository()->model());
     }
 }
