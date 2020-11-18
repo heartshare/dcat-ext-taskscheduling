@@ -1,14 +1,21 @@
 {
     "name": "nivin-studio/dcat-ext-taskscheduling",
-    "description": "Description...",
+    "description": "A Dcat-Admin package to manage your cron jobs through a beautiful dashboard",
     "type": "library",
-    "keywords": ["dcat-admin", "extension"],
+    "keywords": [
+        "dcat-admin",
+        "extension",
+        "taskscheduling",
+        "task",
+        "scheduling",
+        "manager"
+    ],
     "homepage": "https://github.com/nivin-studio/dcat-ext-taskscheduling",
     "license": "MIT",
     "authors": [
         {
-            "name": "your name",
-            "email": "your email"
+            "name": "Ving",
+            "email": "Ving@nivin.cn"
         }
     ],
     "require": {
